@@ -11,7 +11,7 @@ const IsUserPresentUsingEmailService = async (email)=>{
                 data : user
             }
         }else{
-            throw new Error("Unable to get user details")
+            throw new fError("Unable to get user details")
         }
 
     }catch(err){
