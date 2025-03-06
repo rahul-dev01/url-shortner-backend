@@ -1,4 +1,3 @@
-// const httpStatus = require("http-status")
 const {CheckEmailDomainIsPersonalOrNotUtil} = require("./../utils/auth.utils")
 const {IsUserPresentUsingEmailService, CreateNewUserService} = require("./../services/user.service")
 const {IsOrganizationPresentUsingOrgDomainService, CreateNewOrganizationService} = require("./../services/organization.service")
@@ -35,7 +34,7 @@ const SignupController = async (req, res)=>{
         }
 
 
-        // TODO : if user is already present, then return error
+       
         const IsUserPresentUsingEmailServiceResult = await IsUserPresentUsingEmailService(email)
         if(IsUserPresentUsingEmailServiceResult.success){
             const err = new Error("User already present")
