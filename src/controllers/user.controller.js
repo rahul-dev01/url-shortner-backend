@@ -43,7 +43,6 @@ const FetchAllUrlsOfTheUserUsingUserIdController = async (req, res)=>{
             success : false,
             message : err.message
         })
-
     }
 }
 
